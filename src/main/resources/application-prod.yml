@@ -1,0 +1,33 @@
+server:
+  # 外网端口
+  port: 8080
+spring:
+  # db1 数据源配置
+  datasource:
+    base:
+      url: jdbc:mysql://127.0.0.1:3306/mydatabase?characterEncoding=UTF-8&serverTimezone=GMT%2b8&autoReconnect=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 10
+      max-wait: 60000
+      min-idle: 1
+      initial-size: 1
+      validation-query: select 'x'
+      test-on-borrow: false
+      test-on-return: false
+      itest-while-idle: true
+      time-between-eviction-runs-millis: 300000
+      filters: stat,wall,slf4j
+  # redis  连接配置
+ # redis:
+   # host: 192.168.2.238
+  #  port: 7379
+   # database: 0
+   # timeout: 2000
+#    password: Dcxx-redis=123!
+
+# 日志配置
+
+
+
